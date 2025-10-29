@@ -1,0 +1,5 @@
+{
+  "name": "Adventure Path",
+  "description": "An interactive game that guides users through a series of life choices, starting with login, occupation, game mode, and finally, budget allocation in a gamified environment.",
+  "requestFramePermissions": []
+}

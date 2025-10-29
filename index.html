@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LifeQuest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+  <style>
+    :root {
+      --bg-primary: #0a102a;
+      --bg-secondary: #1a2035;
+      --accent-primary: #00f6ff;
+      --accent-secondary: #22d3ee;
+      --text-primary: #e2e8f0;
+      --text-secondary: #94a3b8;
+      --border-color: #334155;
+    }
+    body {
+      scrollbar-width: thin;
+      scrollbar-color: var(--accent-secondary) var(--bg-secondary);
+    }
+    body::-webkit-scrollbar {
+      width: 8px;
+    }
+    body::-webkit-scrollbar-track {
+      background: var(--bg-secondary);
+    }
+    body::-webkit-scrollbar-thumb {
+      background-color: var(--accent-secondary);
+      border-radius: 10px;
+      border: 2px solid var(--bg-secondary);
+    }
+    .btn-primary {
+      background-color: var(--accent-secondary);
+      color: #0a102a;
+      font-weight: 600;
+      transition: all 0.2s ease-in-out;
+    }
+    .btn-primary:hover {
+      background-color: var(--accent-primary);
+      box-shadow: 0 0 15px var(--accent-primary);
+    }
+    .btn-primary:disabled {
+        background-color: #475569;
+        color: #94a3b8;
+        cursor: not-allowed;
+    }
+    .focus-ring-cyan {
+        outline: none;
+        box-shadow: 0 0 0 2px var(--bg-primary), 0 0 0 4px var(--accent-primary);
+    }
+    .card-base {
+        background-color: rgba(26, 32, 53, 0.7);
+        border: 1px solid var(--border-color);
+        backdrop-filter: blur(8px);
+        border-radius: 0.75rem;
+    }
+    @keyframes spin-circle {
+      0% {
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: rotate(180deg) scale(1.1);
+        opacity: 0.7;
+      }
+      100% {
+        transform: rotate(360deg) scale(1);
+        opacity: 1;
+      }
+    }
+    .fate-spinner {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 4px dotted var(--accent-primary);
+      animation: spin-circle 2s linear infinite;
+    }
+  </style>
+</head>
+  <body class="bg-[#0a102a]">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
